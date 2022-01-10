@@ -29,6 +29,10 @@ function Navigation({ isLoaded }) {
           <NavLink exact to="/">
             Home
           </NavLink>
+          <input
+          type='text'
+          placeholder='Photos, people, or groups'
+          />
           {isLoaded && sessionLinks}
         </li>
       </ul>
