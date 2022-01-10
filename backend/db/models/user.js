@@ -52,6 +52,9 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = function (models) {
     // associations can be defined here
+    User.hasMany(models.Comment, { foreignKey: 'userId' });
+    User.hasMany(models.Image, { foreignKey: 'userId' });
+    User.hasMany(models.Album, { foreignKey: 'userId'});
   };
 
   // Instance model methods: return an object with only the user instance of info in a JWT

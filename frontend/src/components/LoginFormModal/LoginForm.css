@@ -6,7 +6,8 @@ form {
   display: flex;
   flex-direction: column;
   width: 80%;
-  max-width: 250px;
+  align-content: center;
+  background-color: gray;
 }
 
 form input {
