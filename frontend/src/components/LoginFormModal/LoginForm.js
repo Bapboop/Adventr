@@ -21,13 +21,8 @@ function LoginForm() {
   };
 
   const demoUser = () => {
-    setErrors([]);
-    return dispatch(sessionActions.login({ credential: "Demo-lition", password: "password" })).catch(
-      async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      }
-    );
+    setCredential('Demo-lition');
+    setPassword('password');
   };
 
   return (
@@ -56,7 +51,7 @@ function LoginForm() {
         />
       </label>
       <button type="submit">Log In</button>
-      <button className='demo-butt' onClick={demoUser}>Demo User</button>
+      <button type="submit" className='demo-butt' onClick={demoUser}>Demo User</button>
     </form>
   );
 }
