@@ -21,7 +21,7 @@ function App() {
         <Switch>
           <Route exact path ='/'>
             <div className='slideshow'>
-              <SplashBackground />  
+              <SplashBackground />
             </div>
             <Footer />
           </Route>
