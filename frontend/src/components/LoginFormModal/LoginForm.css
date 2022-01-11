@@ -27,3 +27,75 @@ form input {
 .log-butt:hover {
   cursor: pointer;
 }
+
+
+.login-modal {
+  /* border: solid 10px green; */
+  width: 22rem;
+
+  background-color: #fff;
+  padding: 1.5rem;
+
+  border-radius: 0.25rem;
+  margin: 0;
+}
+
+.login-modal input {
+  /* background-color: green; */
+  padding: 1rem 1rem 1rem .25rem;
+}
+
+.login-butt-modal {
+  background-color: #128fdc;
+
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  width: 100%;
+
+  font-size: 1rem;
+
+  border-radius: 0.25rem;
+
+  outline: none;
+  border-style: none;
+
+  color: #fff;
+
+  cursor: pointer;
+
+}
+
+.demo-butt-modal {
+  background-color: #128fdc;
+
+  margin-top: .25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  width: 100%;
+
+  font-size: 1rem;
+
+  border-radius: 0.25rem;
+
+  outline: none;
+  border-style: none;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.demo-butt-modal:hover {
+  color: rgba(255, 255, 255, 0.575)
+}
+
+.login-butt-modal:hover {
+  color: rgba(255, 255, 255, 0.575)
+}

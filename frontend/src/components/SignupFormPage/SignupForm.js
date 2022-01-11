@@ -37,7 +37,7 @@ function SignupForm() {
       <label>
         Username
         <input
-          className='username-input'
+          // className='username-input'
           type="text"
           value={username}
           placeholder="Username"
