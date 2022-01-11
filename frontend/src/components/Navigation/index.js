@@ -28,7 +28,7 @@ function Navigation({ isLoaded }) {
         <nav className="navbar-ele">
           <div className="left-container">
             <NavLink exact to="/">
-              LogoPlaceholder
+              AdventrLogo
             </NavLink>
           </div>
 

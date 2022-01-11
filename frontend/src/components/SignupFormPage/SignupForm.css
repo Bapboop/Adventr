@@ -13,3 +13,27 @@ form input {
   margin: 8px 0px;
   width: 100%;
 }
+
+.signup-butt {
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  /* padding: 6px 0px; */
+
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  height: 32px;
+  min-width: 80px;
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: top;
+  text-align: center;
+
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+
+.signup-butt:hover {
+  cursor: pointer;
+  color:gray;
+}

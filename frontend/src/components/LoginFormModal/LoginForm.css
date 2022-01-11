@@ -14,3 +14,16 @@ form input {
   margin: 8px 0px;
   width: 100%;
 }
+
+.log-butt {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  /* justify-coent: flex-start; */
+  position: relative;
+}
+
+.log-butt:hover {
+  cursor: pointer;
+}
