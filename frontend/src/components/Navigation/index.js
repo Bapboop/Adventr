@@ -23,18 +23,23 @@ function Navigation({ isLoaded }) {
   }
 
   return (
-    <div className="nav-bar-container">
+    <div className="navbar-container">
       <ul>
-        <li>
-          <NavLink exact to="/">
-            Home
-          </NavLink>
-          <input
-          type='text'
-          placeholder='Photos, people, or groups'
-          />
-          {isLoaded && sessionLinks}
-        </li>
+        <nav className="navbar-ele">
+          <div className="left-container">
+            <NavLink exact to="/">
+              LogoPlaceholder
+            </NavLink>
+          </div>
+
+          <div className="center-container">
+            <input type="text" placeholder="Photos, people, or groups" />
+          </div>
+          <li></li>
+          <div className="right-container">
+            {isLoaded && sessionLinks}
+          </div>
+        </nav>
       </ul>
     </div>
   );
