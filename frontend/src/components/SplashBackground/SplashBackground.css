@@ -25,7 +25,7 @@
   background-repeat: none;
   opacity: 0;
   z-index: -1;
-  animation: imageAnimation 21s linear infinite 0s;
+  animation: imageAnimation 20s linear infinite 0s;
 }
 
 

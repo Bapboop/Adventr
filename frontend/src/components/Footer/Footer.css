@@ -12,7 +12,7 @@
   flex-direction: column;
   background-color: black;
   height: 60px;
-  color: gray;
+  color: rgba(185, 184, 184, 0.685);
   width: 100%;
   list-style-type: none;
   font: 14px;
@@ -25,14 +25,15 @@
   padding-top: 6px;
 }
 
-
 .foot-links {
   display: flex;
   justify-content: space-around;
+  /* padding: 10px; */
   padding-bottom: 10px;
 }
 
 .foot-container li:hover {
   cursor: pointer;
   color: white;
+  /* font-weight: 600px; */
 }
