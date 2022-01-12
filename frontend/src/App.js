@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./components/SignupFormPage";
+// import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SplashBackground from './components/SplashBackground';
+import ImageBrowser from "./components/ImageBrowser";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +25,10 @@ function App() {
               <SplashBackground />
             </div>
             <Footer />
+          </Route>
+          <Route path='/images'>
+            {/* <div> HELLO PHOTOS ROUTE</div> */}
+            <ImageBrowser />
           </Route>
           {/* <Route path="/signup"> */}
             {/* <SignupFormPage /> */}
