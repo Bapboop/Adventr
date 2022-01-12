@@ -17,7 +17,7 @@ export const getImages = () => async (dispatch) => {
 
   if (response.ok) {
     const images = await response.json();
-    console.log(images[0], "######## IMAGES");
+    // console.log(images[0], "######## IMAGES");
     dispatch(loadImages(images));
     // return images
   }

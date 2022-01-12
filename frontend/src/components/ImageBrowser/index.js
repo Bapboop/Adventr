@@ -15,7 +15,7 @@ const ImageBrowser = () => {
     return Object.values(state.images);
   });
 
-  // console.log(images, "+++++IMAGES +++");
+  console.log(images, "+++++IMAGES +++");
 
   return (
     <div className="browser-container">
