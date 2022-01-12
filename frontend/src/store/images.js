@@ -32,7 +32,7 @@ export const getImages = () => async (dispatch) => {
 };
 
 export const createImage = (payload) => async dispatch => {
-  const response = await fetch(`/api/images`, {
+  const response = await csrfFetch(`/api/images`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify(payload)

@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SplashBackground from './components/SplashBackground';
 import ImageBrowser from "./components/ImageBrowser";
+import ImageCreate from "./components/ImageCreate";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,9 +27,13 @@ function App() {
             </div>
             <Footer />
           </Route>
-          <Route path='/images'>
+          <Route exact path='/images'>
             {/* <div> HELLO PHOTOS ROUTE</div> */}
             <ImageBrowser />
+          </Route>
+          <Route exact path='/images/new' >
+            HELLO IMAGE CREATER
+            <ImageCreate />
           </Route>
           {/* <Route path="/signup"> */}
             {/* <SignupFormPage /> */}
