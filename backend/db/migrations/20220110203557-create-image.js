@@ -16,26 +16,31 @@ module.exports = {
         allowNull: false,
 
       },
-      albumId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Albums'
-        },
-        allowNull: false
-      },
+      // albumId: {
+      //   type: Sequelize.INTEGER,
+      //   references: {
+      //     model: 'Albums'
+      //   },
+      //   allowNull: true,
+      // },
       imageUrl: {
         type: Sequelize.STRING(500)
       },
-      content: {
-        type: Sequelize.TEXT(500)
+      description: {
+        type: Sequelize.STRING(500)
       },
+      // comments: {
+      //   type: Sequelize.TEXT(500)
+      // },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       }
     });
   },
