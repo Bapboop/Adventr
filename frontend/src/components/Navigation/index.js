@@ -28,7 +28,10 @@ function Navigation({ isLoaded }) {
         <nav className="navbar-ele">
           <div className="left-container">
             <NavLink exact to="/">
-              AdventrLogo
+              Adventr
+            </NavLink>
+            <NavLink exact to='/photostream'>
+              Your photostream
             </NavLink>
           </div>
 

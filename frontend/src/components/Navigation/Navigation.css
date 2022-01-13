@@ -37,11 +37,12 @@
 .left-container {
   /* background-color: blue; */
   display: flex;
-  justify-content: space-between;
-  width: 100px;
+  justify-content: space-evenly;
+  width: 400px;
   position: absolute;
   left: 5%;
   align-items: center;
+
 
 }
 
