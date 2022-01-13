@@ -15,13 +15,13 @@ const ImageBrowser = () => {
     return Object.values(state.images);
   });
 
-  console.log(images, "+++++IMAGES +++");
+  // console.log(images, "+++++IMAGES +++");
 
   return (
     <div className="browser-container">
       <div className="browser-image">
         {images?.map((image) => {
-          return <img src={image.imageUrl} key={image.id} alt="" />;
+          return <img src={image.imageUrl} key={image.id} alt="" />
         })}
       </div>
     </div>

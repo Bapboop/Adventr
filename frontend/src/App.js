@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import SplashBackground from './components/SplashBackground';
 import ImageBrowser from "./components/ImageBrowser";
 import ImageCreate from "./components/ImageCreate";
+import PhotoStream from "./components/PhotoStream";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,9 +33,13 @@ function App() {
             <ImageBrowser />
           </Route>
           <Route exact path='/images/new' >
-            HELLO IMAGE CREATER
+            {/* HELLO IMAGE CREATER */}
             <ImageCreate />
           </Route>
+
+          {<Route exact path='/photostream'>
+            <PhotoStream />
+          </Route> }
           {/* <Route path="/signup"> */}
             {/* <SignupFormPage /> */}
           {/* </Route> */}

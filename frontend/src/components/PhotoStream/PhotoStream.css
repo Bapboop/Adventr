@@ -1,10 +1,4 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  border: 0;
-}
-*/
-.browser-image {
+.photos {
   border: 5px solid green;
   display:-ms-inline-grid;
   flex-direction: column;
