@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
+import { NavLink } from "react-router-dom";
+import "./Navigation.css";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -29,7 +31,17 @@ function ProfileButton({ user }) {
   };
 
   return (
-    <>
+    <div className="active">
+      <NavLink className="uploadCloud" to="/images/new">
+        <button>
+          <img
+            alt="upload-cloud"
+            src={
+              "https://res.cloudinary.com/ddxtopm0l/image/upload/v1642078914/Flimmr/upload-icon-png_hf1aiv.png"
+            }
+          />
+        </button>
+      </NavLink>
       <button onClick={openMenu}>
         <i className="fas fa-globe-americas" />
       </button>
@@ -38,11 +50,16 @@ function ProfileButton({ user }) {
           <li>{user.username}</li>
           <li>{user.email}</li>
           <li>
+ 
               <button onClick={signout}>Log Out</button>
+
+
+
+
           </li>
         </ul>
       )}
-    </>
+    </div>
   );
 }
 

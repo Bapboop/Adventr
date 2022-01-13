@@ -80,3 +80,16 @@
   left: 25%;
   right: 25%;
 }
+
+.uploadCloud img {
+  display: flex;
+  width: 40px;
+  margin-right: 10px;
+
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}

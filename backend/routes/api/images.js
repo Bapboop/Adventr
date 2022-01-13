@@ -17,7 +17,7 @@ router.get('/', asyncHandler(async(req, res, next) => {
 router.post('/', asyncHandler(async (req, res, next) => {
   const { userId, imageUrl, description } = req.body;
   const newImage = await Image.create(req.body);
-  console.log(newImage, '#@#@#@#@ BACK END POST IMAGE ROUTE #@#@#@#@')
+  // console.log(newImage, '#@#@#@#@ BACK END POST IMAGE ROUTE #@#@#@#@')
   // return res.redirect(`${req.imageUrl}/${id}`)
   return res.json(newImage)
 }));

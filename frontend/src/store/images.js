@@ -4,6 +4,7 @@ import { csrfFetch } from "./csrf";
 const LOAD_IMAGES = "images/loadImages";
 const CREATE_IMAGE = "images/createImage"
 
+
 // Action creators:
 const loadImages = (images) => {
   return {
@@ -26,7 +27,7 @@ export const getImages = () => async (dispatch) => {
 
   if (response.ok) {
     const images = await response.json();
-    console.log(images[0], "######## IMAGES");
+    // console.log(images[0], "######## IMAGES");
     dispatch(loadImages(images));
   }
 };
@@ -41,8 +42,9 @@ export const createImage = (payload) => async dispatch => {
   const newImage = await response.json();
   dispatch(addImage(newImage))
   return newImage;
-
 };
+
+
 
 // Reducer:
 

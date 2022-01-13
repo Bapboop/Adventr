@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css";
+import { useHistory } from "react-router-dom";
 
 function LoginForm() {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
@@ -21,9 +23,15 @@ function LoginForm() {
   };
 
   const demoUser = () => {
+    // e.preventDefault();
+
     setCredential('Demo-lition');
     setPassword('password');
+    history.push('/images');
   };
+
+
+
 
   return (
     <form className='login-modal' onSubmit={handleSubmit}>

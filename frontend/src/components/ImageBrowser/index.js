@@ -18,11 +18,17 @@ const ImageBrowser = () => {
   console.log(images, "+++++IMAGES +++");
 
   return (
-    <div className="browser-container">
+    <div className="browser-grid">
       <div className="browser-image">
-        {images?.map((image) => {
-          return <img src={image.imageUrl} key={image.id} alt="" />;
-        })}
+        {images?.map((image) => (
+
+            <div className='images'>
+              <img src={image.imageUrl} key={image.id} alt="" />
+              <p>{image?.description}  </p>
+            </div>
+
+))}
+
       </div>
     </div>
   );
