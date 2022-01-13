@@ -27,9 +27,15 @@
 
 .foot-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   /* padding: 10px; */
   padding-bottom: 10px;
+
+}
+
+.foot-links li {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .foot-container li:hover {

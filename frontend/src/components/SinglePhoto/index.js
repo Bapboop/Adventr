@@ -10,20 +10,12 @@ const SinglePhoto = () => {
   const history = useHistory();
 
   // Each photo id:
-  console.log(window.location.pathname);
-  const pathname = window.location.pathname;
-  const patharray = pathname.split("/");
-  const photoId = parseInt(patharray[2]);
-
+  const { photoId } = useParams();
   const sessionUserId = useSelector((state) => state.session.user.id);
-  console.log(sessionUserId, "###");
-  const userPics = useSelector((state) => {
-    console.log(state.userimages)
-    return state.userimages;
-  });
-  // console.log(JSON.stringify(state.userimages));
+  // console.log(sessionUserId, '###')
+  const userPics = useSelector((state) => state.userimages);
   const photo = useSelector((state) => state.userimages[photoId]);
-  console.log(photo, "**photo**");
+  // console.log(photo, '**photo**')
 
   const [description, setDescription] = useState(photo?.description);
   const updateDescription = (e) => setDescription(e.target.value);
@@ -34,15 +26,16 @@ const SinglePhoto = () => {
   };
 
   const handleUpdate = async () => {
+
     const payload = {
       photoId,
-      description,
+      description
     };
 
-    let updatedImage = await dispatch(editImage(payload));
+    let updatedImage = await dispatch(editImage(payload))
 
     if (updatedImage) {
-      history.push(`/photostream`);
+      history.push(`/photostream`)
     }
   };
 
