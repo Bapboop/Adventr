@@ -5,11 +5,11 @@
 }
 */
 .browser-image {
-  border: 5px solid green;
+  /* border: 5px solid green; */
   display:-ms-inline-grid;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  
+
 }

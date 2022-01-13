@@ -41,7 +41,7 @@ const SinglePhoto = () => {
 
   return (
     <div>
-      Hi from single photo!
+      
       <img src={photo?.imageUrl} alt="" key={photoId ? photoId : ""} />
       <div>{photo?.description}</div>
       {photo?.userId === sessionUserId ? (
