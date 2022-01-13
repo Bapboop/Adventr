@@ -29,10 +29,10 @@ const ImageCreate = () => {
     }
 
     let createdImage = await dispatch(createImage(payload))
-    console.log('handle submit new image', createdImage)
+    // console.log('handle submit new image', createdImage)
 
     if (createdImage) {
-      history.push(`/images`)
+      history.push(`/photostream`)
     }
   }
 
