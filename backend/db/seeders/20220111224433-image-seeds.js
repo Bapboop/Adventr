@@ -96,6 +96,30 @@ module.exports = {
             "https://res.cloudinary.com/dd9qejhag/image/upload/v1642166530/Adventr/https_3A_2F_2Fspecials-images.forbesimg.com_2Fimageserve_2F5e2cb634f133f400076aabb4_2Fvietnam_2F960x0_rrprql.jpg",
           description: "Bà Nà station was so cool!",
         },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642168042/Adventr/1200px-JewelSingaporeVortex1_ehxwzw.jpg",
+          description: "Best place to have a layover, EVER!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642168230/Adventr/cabin-rentals-luxury_xzzkg9.jpg",
+          description: "COZY!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://www.cruisestoalaska.com/wp-content/uploads/denali-national-park.jpg",
+          description: "Alaska was great!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642168439/Adventr/alpine_voss_resort_vestland_fjord_norway_credits_hunnalvatn_media_2_1_2df89176-d7c8-4bb7-b7f4-88cd1ba7daf4_fpwpd7.jpg",
+          description: "It was so cold but so fun!",
+        },
 
 
 
