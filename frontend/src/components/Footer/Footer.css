@@ -44,10 +44,19 @@
   color: white;
 }
 
-.white {
+.foot-container a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.white-line {
   color: rgba(255, 255, 255, 0.699);
 }
 
 a:link {
   text-decoration: none;
+}
+
+.atag-color {
+  color: rgb(141, 176, 130)
 }

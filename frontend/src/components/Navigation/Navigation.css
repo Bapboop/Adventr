@@ -107,5 +107,24 @@
 .cloud {
   stroke: transparent;
   stroke-width: 1;
-  
+
+}
+
+.logout-butt {
+  /* border: none; */
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  height: 32px;
+  min-width: 80px;
+
+  /* display: inline-block; */
+  padding: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-top: 5px;
 }

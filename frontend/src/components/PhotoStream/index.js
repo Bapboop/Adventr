@@ -1,24 +1,27 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserImages, deleteUserImages } from "../../store/photostream";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "./PhotoStream.css";
+// import * as session from '../../store/session'
 
 const PhotoStream = () => {
   const dispatch = useDispatch();
   // const history = useHistory();
 
-  const sessionUserId = useSelector((state) => state.session.user.id);
-
-  //
   useEffect(() => {
     dispatch(getUserImages(sessionUserId));
   }, [dispatch]);
 
+  const sessionUserId = useSelector((state) => state.session.user.id);
+
+
   const userPics = useSelector((state) => {
     return Object.values(state.userimages);
   });
+
+
 
   return (
     <div className="photos-container">
