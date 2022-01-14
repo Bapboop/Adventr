@@ -23,7 +23,7 @@ const PhotoStream = () => {
   return (
     <div className="photos-container">
       <div>
-      <h2> Photostream</h2>
+      <h2 className='stream'> Photostream</h2>
 
       </div>
       <div className="photos-item">

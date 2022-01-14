@@ -37,14 +37,13 @@ function ProfileButton({ user }) {
   return (
     <div className="active">
       <NavLink className="uploadCloud" to="/images/new">
-        <button>
           <img
+            className='cloud'
             alt="upload-cloud"
             src={
-              "https://res.cloudinary.com/ddxtopm0l/image/upload/v1642078914/Flimmr/upload-icon-png_hf1aiv.png"
+              "https://res.cloudinary.com/dd9qejhag/image/upload/v1642111799/Adventr/flickr-cloud_f4tovr.png"
             }
           />
-        </button>
       </NavLink>
       <button onClick={openMenu}>
         <i className="fas fa-globe-americas" />

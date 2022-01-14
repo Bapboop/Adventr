@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import { editImage } from "../../store/photostream";
+import "./SinglePhoto.css";
 
 const SinglePhoto = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const SinglePhoto = () => {
   const photo = useSelector((state) => state.userimages[photoId]);
   // console.log(photo, '**photo**')
 
+
   const [description, setDescription] = useState(photo?.description);
   const updateDescription = (e) => setDescription(e.target.value);
 
@@ -26,40 +28,42 @@ const SinglePhoto = () => {
   };
 
   const handleUpdate = async () => {
-
     const payload = {
       photoId,
-      description
+      description,
     };
 
-    let updatedImage = await dispatch(editImage(payload))
+    let updatedImage = await dispatch(editImage(payload));
 
     if (updatedImage) {
-      history.push(`/photostream`)
+      history.push(`/photostream`);
     }
   };
 
   return (
     <div>
-      
-      <img src={photo?.imageUrl} alt="" key={photoId ? photoId : ""} />
-      <div>{photo?.description}</div>
-      {photo?.userId === sessionUserId ? (
-        <>
-          <button className="delete-butt" onClick={handleDelete}>
-            Delete
-          </button>
-          <textarea
-            value={description ? description : ""}
-            onChange={updateDescription}
-          />
-          <button className="edit-butt" onClick={handleUpdate}>
-            Update
-          </button>
-        </>
-      ) : (
-        <></>
-      )}
+      <div className="description">
+        <img className='actual-image' src={photo?.imageUrl} alt="" key={photoId ? photoId : ""} />
+        <div className="description-text">{photo?.description} {photo?.User?.username}</div>
+        {photo?.userId === sessionUserId ? (
+          <>
+            <textarea
+              value={description ? description : ""}
+              onChange={updateDescription}
+            />
+            <div className='space' />
+            <button className="edit-butt" onClick={handleUpdate}>
+              Update
+            </button>
+            <div className='space' />
+            <button className="delete-butt" onClick={handleDelete}>
+              Delete
+            </button>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };

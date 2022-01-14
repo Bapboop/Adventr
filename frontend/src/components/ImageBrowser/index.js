@@ -19,7 +19,7 @@ const ImageBrowser = () => {
     <>
       <div className="photos-container">
         <div>
-          <h2> Explore </h2>
+          <h2 className='explore-stream'>Explore</h2>
         </div>
         <div className="photos-item">
           {images?.map((image) => (

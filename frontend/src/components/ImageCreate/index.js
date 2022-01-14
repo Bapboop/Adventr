@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/";
 import { createImage } from "../../store/images";
+import './ImageCreate.css';
 
 const ImageCreate = () => {
   const dispatch = useDispatch();
@@ -41,9 +42,10 @@ const ImageCreate = () => {
 
   return (
     <div className="image-create-container">
-      <h2>Share your adventure!</h2>
+      <h2 className='share'>Share your adventure!</h2>
       <form onSubmit={handleSubmit} className="image-create-form">
         <ul>
+
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
@@ -61,7 +63,7 @@ const ImageCreate = () => {
           value={description}
           onChange={updateDescription}
         />
-        <button type="submit">Submit</button>
+        <button className='sub-butt' type="submit">Submit</button>
       </form>
     </div>
   );
