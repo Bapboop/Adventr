@@ -29,9 +29,7 @@ function ProfileButton({ user }) {
 
   const signout = (e) => {
     e.preventDefault();
-    history.push('/')
-    return dispatch(sessionActions.signout());
-    // history.push('/')
+    return dispatch(sessionActions.signout()).then(() => history.push('/'))
   };
 
   return (
@@ -45,24 +43,25 @@ function ProfileButton({ user }) {
             }
           />
       </NavLink>
-      <button onClick={openMenu}>
-        <i className="fas fa-globe-americas" />
-      </button>
-      {showMenu && (
-        <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
-          <li>
-
-              <button onClick={signout}>Log Out</button>
-
-
+      <button className='logout-butt' onClick={signout}>Log Out</button>
+      {/* <button onClick={openMenu}> */}
+        {/* <i className="fas fa-globe-americas" /> */}
+      {/* </button> */}
+      </div>
+      // {showMenu && (
+        // <ul className="profile-dropdown">
+        //   <li>{user.username}</li>
+        //   <li>{user.email}</li>
+        //   <li>
 
 
-          </li>
-        </ul>
-      )}
-    </div>
+
+
+
+        //   </li>
+        // </ul>
+      // )}
+    // </div>
   );
 }
 
