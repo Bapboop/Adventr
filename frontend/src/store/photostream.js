@@ -105,7 +105,7 @@ const photostreamReducer = (state = {}, action) => {
     }
     case DELETE_PHOTO: {
       newState = { ...state };
-      console.log("FROM DELETE PHOTO ACTION", action);
+      // console.log("FROM DELETE PHOTO ACTION", action);
       delete newState[action.removedPhoto];
       return newState;
     }

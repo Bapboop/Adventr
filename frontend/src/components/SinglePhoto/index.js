@@ -10,13 +10,12 @@ const SinglePhoto = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // Each photo id:
+
   const { photoId } = useParams();
   const sessionUserId = useSelector((state) => state.session.user.id);
-  // console.log(sessionUserId, '###')
+
   const userPics = useSelector((state) => state.userimages);
   const photo = useSelector((state) => state.userimages[photoId]);
-  // console.log(photo, '**photo**')
 
 
   const [description, setDescription] = useState(photo?.description);
@@ -24,6 +23,7 @@ const SinglePhoto = () => {
 
   const handleDelete = async () => {
     let deletedImage = await dispatch(deleteUserImages(photoId));
+    
     history.push(`/photostream`);
   };
 
