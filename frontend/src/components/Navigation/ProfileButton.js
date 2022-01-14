@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./Navigation.css";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => {
@@ -25,9 +26,12 @@ function ProfileButton({ user }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
+
   const signout = (e) => {
     e.preventDefault();
-    dispatch(sessionActions.signout());
+    history.push('/')
+    return dispatch(sessionActions.signout());
+    // history.push('/')
   };
 
   return (
@@ -50,7 +54,7 @@ function ProfileButton({ user }) {
           <li>{user.username}</li>
           <li>{user.email}</li>
           <li>
- 
+
               <button onClick={signout}>Log Out</button>
 
 

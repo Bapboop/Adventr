@@ -15,22 +15,22 @@ const ImageBrowser = () => {
     return Object.values(state.images);
   });
 
-  console.log(images, "+++++IMAGES +++");
-
   return (
-    <div className="browser-grid">
-      <div className="browser-image">
-        {images?.map((image) => (
-
-            <div className='images'>
+    <>
+      <div className="photos-container">
+        <div>
+          <h2> Explore </h2>
+        </div>
+        <div className="photos-item">
+          {images?.map((image) => (
+            <div className="images">
               <img src={image.imageUrl} key={image.id} alt="" />
-              <p>{image?.description}  </p>
+              {/* <p>{image?.description} </p> */}
             </div>
-
-))}
-
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

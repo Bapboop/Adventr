@@ -6,13 +6,14 @@ import { createImage } from "../../store/images";
 const ImageCreate = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [imageUrl, setImageUrl] = useState('');
-  const [description, setDescription] = useState('');
+  const [imageUrl, setImageUrl] = useState("");
+  const [description, setDescription] = useState("");
+  const [errors, setErrors] = useState([]);
 
   const updateImageUrl = (e) => setImageUrl(e.target.value);
   const updateDescription = (e) => setDescription(e.target.value);
 
-  const sessionUser = useSelector(state => state.session.user)
+  const sessionUser = useSelector((state) => state.session.user);
   // console.log('#*#*#*#* sessionUser information:', sessionUser, '#*#*#*#*')
 
   // useEffect(() => {
@@ -25,39 +26,45 @@ const ImageCreate = () => {
     const payload = {
       userId: sessionUser.id,
       imageUrl,
-      description
-    }
+      description,
+    };
 
-    let createdImage = await dispatch(createImage(payload))
-    // console.log('handle submit new image', createdImage)
+    let errors = [];
 
-    if (createdImage) {
-      history.push(`/photostream`)
-    }
-  }
+    return dispatch(createImage(payload))
+      .catch(async (res) => {
+        const data = await res.json()
+        if (data.errors) setErrors(data.errors)
+      }).then((res) => res && history.push('/photostream'));
 
+  };
 
   return (
-    <div className='image-create-container'>
+    <div className="image-create-container">
       <h2>Share your adventure!</h2>
-      <form onSubmit={handleSubmit} className='image-create-form'>
+      <form onSubmit={handleSubmit} className="image-create-form">
+        <ul>
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
         <input
-          type='text'
-          placeholder='Image URL'
+          type="text"
+          placeholder="Image URL"
           required
           value={imageUrl}
           onChange={updateImageUrl}
         />
         <input
-          type='textarea'
-          placeholder='A description of your photo!'
+          type="textarea"
+          placeholder="A description of your photo!"
           value={description}
           onChange={updateDescription}
         />
-      <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default ImageCreate;

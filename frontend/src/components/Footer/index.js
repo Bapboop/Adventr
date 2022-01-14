@@ -19,11 +19,12 @@ function Footer() {
 
       <div className='foot-links'>
         <li>Robert Popphan</li>
-        <li>|</li>
+        <li className='white'>|</li>
         <li>Adventr 2022 </li>
-        <li>|</li>
+        <li className='white'>|</li>
         <li>
-        <i className="fab fa-github" />
+        {/* <a style="color:black;"><i className="fab fa-github"></i></a> */}
+        <a style={{color: "rgb(141, 176, 130)"}} href='https://github.com/Bapboop' target='_blank' > <i className='fab fa-github' /></a>
         </li>
       </div>
 

@@ -25,7 +25,7 @@
   background-repeat: none;
   opacity: 0;
   z-index: -1;
-  animation: imageAnimation 20s linear infinite 0s;
+  animation: imageAnimation 21s linear infinite 0s;
 }
 
 
@@ -36,19 +36,19 @@
 
 .bg-slideshow li:nth-child(2) span {
   background-image: url("../../../public/images/Newport-harbor.jpg");
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 .bg-slideshow li:nth-child(3) span {
   background-image: url("../../../public/images/Pakistan.jpg");
-  animation-delay: 8s;
+  animation-delay: 10s;
 }
 .bg-slideshow li:nth-child(4) span {
   background-image: url("../../../public/images/Sapa-vn.jpg");
-  animation-delay: 12s;
+  animation-delay: 15s;
 }
 .bg-slideshow li:nth-child(5) span {
   background-image: url("../../../public/images/Thailand.jpg");
-  animation-delay: 16s;
+  animation-delay: 20s;
 }
 
 
