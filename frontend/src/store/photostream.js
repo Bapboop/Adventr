@@ -63,19 +63,19 @@ export const getSoloImages = (id) => async (dispatch) => {
   return oneImage;
 };
 
-export const deleteUserImages = (id) => async (dispatch) => {
-  // const { photoId } = id
-  const response = await csrfFetch(`/api/photostream/${id}`, {
-    method: "DELETE",
-    // body: JSON.stringify( id ),
-  });
+// export const deleteUserImages = (id) => async (dispatch) => {
+//   // const { photoId } = id
+//   const response = await csrfFetch(`/api/photostream/${id}`, {
+//     method: "DELETE",
+//     // body: JSON.stringify( id ),
+//   });
 
-  if (response.ok) {
-    const deletedImage = await response.json();
-    // console.log(deletedImage, "test deleted image");
-    dispatch(deletePhoto(deletedImage));
-  }
-};
+//   if (response.ok) {
+//     const deletedImage = await response.json();
+//     // console.log(deletedImage, "test deleted image");
+//     dispatch(deletePhoto(deletedImage));
+//   }
+// };
 
 export const editImage = (payload) => async (dispatch) => {
   const response = await csrfFetch(`/api/photostream/${payload.photoId}`, {

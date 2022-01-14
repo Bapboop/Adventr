@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getUserImages, deleteUserImages } from "../../store/photostream";
+// import { getUserImages, deleteUserImages } from "../../store/photostream";
+import { deleteUserImages } from "../../store/images";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
@@ -23,7 +24,7 @@ const SinglePhoto = () => {
 
   const handleDelete = async () => {
     let deletedImage = await dispatch(deleteUserImages(photoId));
-    
+
     history.push(`/photostream`);
   };
 
