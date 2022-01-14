@@ -11,7 +11,7 @@ module.exports = {
           description: "I loved my time in Minneapolis!",
         },
         {
-          userId: 1,
+          userId: 2,
           imageUrl:
             "https://res.cloudinary.com/dd9qejhag/image/upload/v1641946068/Adventr/yegux5ogq1u61_c81qec.jpg",
           description:
@@ -48,6 +48,57 @@ module.exports = {
             "https://res.cloudinary.com/dd9qejhag/image/upload/v1641945399/Adventr/de7mz7ch2pr61_oqibsa.webp",
           description: "I had to take a trip to this secret cave in Arizona!",
         },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642165880/Adventr/GAQ-Guests-0008-1024x683_ttqckb.jpg",
+          description: "I had fun seeing the whale sharks at Georiga Aquarium!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642165908/Adventr/IMG_6574_uabhbw.jpg",
+          description: "I love the sunrise here!",
+        },
+        {
+          userId: 2,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642165844/Adventr/bg1_twj7ey.jpg",
+          description: "What a crazy view!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642165790/Adventr/Mount-Fuji-New_hvcxx3.jpg",
+          description: "Mt Fuji was breathtaking to see!",
+        },
+        {
+          userId: 2,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642165755/Adventr/mount-fuji-day-trip-itinerary-header_yot7pa.jpg",
+          description: "Mt Fuji!!!!!",
+        },
+        {
+          userId: 2,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642166247/Adventr/1516044769838_vjlbe7.jpg",
+          description: "Tubing was so fun!!!",
+        },
+        {
+          userId: 1,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642166362/Adventr/sierra-high-route-usa-shutterstock_722530882-1024x683_sumeaa.jpg",
+          description: "I love this place!",
+        },
+        {
+          userId: 2,
+          imageUrl:
+            "https://res.cloudinary.com/dd9qejhag/image/upload/v1642166530/Adventr/https_3A_2F_2Fspecials-images.forbesimg.com_2Fimageserve_2F5e2cb634f133f400076aabb4_2Fvietnam_2F960x0_rrprql.jpg",
+          description: "Bà Nà station was so cool!",
+        },
+
+
+
       ],
       {}
     );

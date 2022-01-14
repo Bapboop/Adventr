@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getUserImages, deleteUserImages } from "../../store/photostream";
+// import { getUserImages, deleteUserImages } from "../../store/photostream";
+import { deleteUserImages } from "../../store/images";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
@@ -10,13 +11,12 @@ const SinglePhoto = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // Each photo id:
+
   const { photoId } = useParams();
   const sessionUserId = useSelector((state) => state.session.user.id);
-  // console.log(sessionUserId, '###')
+
   const userPics = useSelector((state) => state.userimages);
   const photo = useSelector((state) => state.userimages[photoId]);
-  // console.log(photo, '**photo**')
 
 
   const [description, setDescription] = useState(photo?.description);
@@ -24,6 +24,7 @@ const SinglePhoto = () => {
 
   const handleDelete = async () => {
     let deletedImage = await dispatch(deleteUserImages(photoId));
+
     history.push(`/photostream`);
   };
 

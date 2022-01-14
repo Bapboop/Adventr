@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserImages, deleteUserImages } from "../../store/photostream";
+import { getUserImages} from "../../store/photostream";
+import { deleteUserImages } from "../../store/images";
 import { Link, Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "./PhotoStream.css";
@@ -34,7 +35,7 @@ const PhotoStream = () => {
           return (
             <Link to={`/photo/${image.id}`}>
               <img src={image.imageUrl} key={image.id} alt="" />
-              {/* <span className='description'>{image?.description}</span> */}
+              <span className='description'>{image?.description}</span>
               {/* <span className="delete-butt" onClick={handleDelete} >Delete</span> */}
             </Link>
           );
