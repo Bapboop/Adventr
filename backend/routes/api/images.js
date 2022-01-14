@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Get all images:
 router.get('/', asyncHandler(async(req, res, next) => {
-  const images = await Image.findAll();
+  const images = await Image.findAll({order: [["updatedAt", "ASC"]]});
   // console.log(images[0], '!!!!!!!!!!!!!!!!backend images!!!!!!!!!')
   return res.json(images)
 }))

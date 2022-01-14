@@ -28,6 +28,11 @@ const SinglePhoto = () => {
     history.push(`/photostream`);
   };
 
+  // const textArea = () => {
+  //   console.log('hi')
+  //   document.getElementsByClassName('editBox').style.display = 'block'
+  // }
+
   const handleUpdate = async () => {
     const payload = {
       photoId,
@@ -37,18 +42,19 @@ const SinglePhoto = () => {
     let updatedImage = await dispatch(editImage(payload));
 
     if (updatedImage) {
-      history.push(`/photostream`);
+      history.push(`/photo/${photoId}`);
     }
   };
 
   return (
     <div>
-      <div className="description">
+      <div className="description1">
         <img className='actual-image' src={photo?.imageUrl} alt="" key={photoId ? photoId : ""} />
-        <div className="description-text">{photo?.description} {photo?.User?.username}</div>
+        <div className="description1-text">{photo?.description} {photo?.User?.session.username}</div>
         {photo?.userId === sessionUserId ? (
           <>
             <textarea
+              className="editBox"
               value={description ? description : ""}
               onChange={updateDescription}
             />

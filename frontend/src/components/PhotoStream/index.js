@@ -10,12 +10,11 @@ import "./PhotoStream.css";
 const PhotoStream = () => {
   const dispatch = useDispatch();
   // const history = useHistory();
+  const sessionUserId = useSelector((state) => state.session.user.id);
 
   useEffect(() => {
     dispatch(getUserImages(sessionUserId));
   }, [dispatch]);
-
-  const sessionUserId = useSelector((state) => state.session.user.id);
 
 
   const userPics = useSelector((state) => {
@@ -33,9 +32,9 @@ const PhotoStream = () => {
       <div className="photos-item">
         {userPics?.map((image) => {
           return (
-            <Link to={`/photo/${image.id}`}>
+            <Link key={image.id} to={`/photo/${image.id}`}>
               <img src={image.imageUrl} key={image.id} alt="" />
-              <span className='description'>{image?.description}</span>
+              {/* <div className='description'>{image?.description}</div> */}
               {/* <span className="delete-butt" onClick={handleDelete} >Delete</span> */}
             </Link>
           );

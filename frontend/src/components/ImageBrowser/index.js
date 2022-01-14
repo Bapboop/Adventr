@@ -23,7 +23,7 @@ const ImageBrowser = () => {
         </div>
         <div className="photos-item">
           {images?.map((image) => (
-            <div className="images">
+            <div key={image.id} className="images">
               <img src={image.imageUrl} key={image.id} alt="" />
               {/* <p>{image?.description} </p> */}
             </div>
